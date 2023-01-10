@@ -2,7 +2,8 @@
 #include <string>
 using namespace std;
 
-string numar_cifre_romane(int n) {
+string numar_cifre_romane(int n) 
+{
 
 	int valori[] = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };						
 	//toate simbolurile posibile pentru cifrele romane
@@ -10,17 +11,20 @@ string numar_cifre_romane(int n) {
 	string rezultat = "";
 
 	int i = 0;
-	while (n > 0) {
+	while (n > 0) 
+	{
 		for (int j = n / valori[i]; j > 0; j--) {
 			rezultat += simboluri[i];
 			n -= valori[i];
 		}
 		i++;
 	}
+
 	return rezultat;
 }
 
-int main() {
+int main() 
+{
 	int numar;
 	cout << "Introduceti un numar: ";
 	cin >> numar;
